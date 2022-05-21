@@ -1,0 +1,80 @@
+.service {
+    @include wrapper;
+    padding-top: 140px;
+    min-height: 1065px;
+    position: relative;
+}
+
+.service-heading {
+    font-family: "Rosario";
+    @include font-style(70px, 700, 90px, $font-color);
+    margin-bottom: 20px;
+    min-height: 90px;
+}
+
+.service-description {
+    max-width: 637px;
+    min-height: 90px;
+    @include font-style(18px, 400, 30px, #555555);
+    margin-bottom: 36px;
+}
+
+.service-benefits {
+    max-width: 500px;
+    min-height: 460px;
+}
+
+.service-card {
+    max-width: 500px;
+    min-height: 160px;
+    padding: 40px 60px;
+    @include flex;
+    justify-content: start;
+    &:nth-child(2) {
+        background: #F3FBF8;
+    }
+    &__icon {
+        padding-right: 24px;
+    }
+}
+
+.service-text {
+    min-height: 78px;
+    &__heading {
+        @include font-style(20px, 700, 30px, $font-color);
+        margin-bottom: 8px;
+    }
+    &__description {
+        @include font-style(14px, 400, 20px, #555555);
+    }
+}
+
+.service-arrow {
+    position: absolute;
+    left: 341px;
+    bottom: 146px;
+    border: 1px solid transparent;
+    width: 32px;
+    height: 32px;
+    &:hover {
+        border-color: $hover-color;
+        border-radius: 50%;
+    }
+}
+
+.service-first-bg {
+    position: absolute;
+    right: 100px;
+    bottom: 146px;
+    z-index: -2;
+    max-width: 600px;
+    min-height: 600px;
+    object-fit: cover;
+}
+
+.service-second-bg {
+    position: absolute;
+    top: -35px;
+    right: 35px;
+    z-index: -3;
+}

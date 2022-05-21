@@ -1,0 +1,476 @@
+@font-face {
+  font-family: "DM Sans";
+  src: url("../fonts/DMSans-Regular.woff2") format("woff2"), url("../fonts/DMSans-Regular.woff") format("woff"), url("../fonts/DMSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Rosario";
+  src: url("../fonts/Rosario-Regular.woff2") format("woff2"), url("../fonts/Rosario-Regular.woff") format("woff"), url("../fonts/Rosario-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.header {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-right: 100px;
+  padding-left: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 50px;
+  margin-bottom: 43px;
+  min-height: 56px;
+}
+
+.header-menu {
+  max-width: 374px;
+  min-height: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-menu__item {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #222222;
+}
+.header-menu__item:not(:last-child) {
+  margin-right: 40px;
+}
+.header-menu__item:hover {
+  color: #09A66D;
+}
+
+.header-buttons {
+  max-width: 292px;
+  min-height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-buttons__item {
+  margin-right: 20px;
+  border: 1px solid transparent;
+}
+.header-buttons__item:last-child {
+  margin-right: 32px;
+}
+.header-buttons__item:hover {
+  border-color: #09A66D;
+  border-radius: 50%;
+}
+.header-buttons__btn {
+  min-width: 160px;
+  height: 40px;
+  color: #FFFFFF;
+  background-color: #09A66D;
+  border-radius: 8px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 1px solid transparent;
+}
+.header-buttons__btn:hover {
+  border-color: #222222;
+  color: #222222;
+}
+
+.presentation {
+  width: 100vw;
+  background: rgba(9, 166, 109, 0.05);
+}
+
+.presentation-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-right: 100px;
+  padding-left: 100px;
+  min-height: 850px;
+  padding-top: 93px;
+  padding-bottom: 50px;
+  position: relative;
+}
+
+.presentation-heading {
+  font-family: "Rosario";
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 90px;
+  color: #222222;
+  text-align: center;
+  margin-bottom: 20px;
+  min-height: 90px;
+}
+
+.presentation-description {
+  max-width: 637px;
+  min-height: 90px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: #555555;
+  text-align: center;
+  margin: 0 auto 40px auto;
+}
+
+.presentation-order {
+  max-width: 176px;
+  min-height: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+.presentation-order__text {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  color: #222222;
+}
+.presentation-order__link {
+  border: 2px solid transparent;
+}
+.presentation-order__link:hover {
+  border-color: #222222;
+  border-radius: 50%;
+}
+
+.presentation-stats {
+  position: absolute;
+  max-width: 250px;
+  min-height: 408px;
+  right: 100px;
+  bottom: 50px;
+}
+
+.stats-card {
+  max-width: 250px;
+  min-height: 116px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: start;
+  padding: 17px 33px;
+  background: #FFFFFF;
+}
+.stats-card:not(:last-child) {
+  margin-bottom: 30px;
+}
+.stats-card__icon {
+  margin-right: 24px;
+}
+
+.stats {
+  text-align: center;
+}
+.stats__value {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 48px;
+  color: #000000;
+  margin-bottom: 4px;
+}
+.stats__index {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: #000000;
+}
+
+.presentation-first-bg {
+  position: absolute;
+  top: -37px;
+  left: 1px;
+  z-index: -3;
+  max-width: 612px;
+  min-height: 408px;
+  object-fit: cover;
+}
+
+.presentation-second-bg {
+  position: absolute;
+  bottom: 33px;
+  left: 120px;
+  z-index: -3;
+  max-width: 862px;
+  min-height: 465px;
+  object-fit: cover;
+}
+
+.service {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-right: 100px;
+  padding-left: 100px;
+  padding-top: 140px;
+  min-height: 1065px;
+  position: relative;
+}
+
+.service-heading {
+  font-family: "Rosario";
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 90px;
+  color: #222222;
+  margin-bottom: 20px;
+  min-height: 90px;
+}
+
+.service-description {
+  max-width: 637px;
+  min-height: 90px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: #555555;
+  margin-bottom: 36px;
+}
+
+.service-benefits {
+  max-width: 500px;
+  min-height: 460px;
+}
+
+.service-card {
+  max-width: 500px;
+  min-height: 160px;
+  padding: 40px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: start;
+}
+.service-card:nth-child(2) {
+  background: #F3FBF8;
+}
+.service-card__icon {
+  padding-right: 24px;
+}
+
+.service-text {
+  min-height: 78px;
+}
+.service-text__heading {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  color: #222222;
+  margin-bottom: 8px;
+}
+.service-text__description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #555555;
+}
+
+.service-arrow {
+  position: absolute;
+  left: 341px;
+  bottom: 146px;
+  border: 1px solid transparent;
+  width: 32px;
+  height: 32px;
+}
+.service-arrow:hover {
+  border-color: #09A66D;
+  border-radius: 50%;
+}
+
+.service-first-bg {
+  position: absolute;
+  right: 100px;
+  bottom: 146px;
+  z-index: -2;
+  max-width: 600px;
+  min-height: 600px;
+  object-fit: cover;
+}
+
+.service-second-bg {
+  position: absolute;
+  top: -35px;
+  right: 35px;
+  z-index: -3;
+}
+
+.explore {
+  width: 100vw;
+  background: rgba(9, 166, 109, 0.05);
+}
+
+.explore-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-right: 100px;
+  padding-left: 100px;
+  padding-top: 89px;
+  min-height: 832px;
+  position: relative;
+}
+
+.explore-content {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+
+.explore-image {
+  margin-right: 50px;
+}
+.explore-image__item {
+  max-width: 600px;
+  min-height: 600px;
+  object-fit: cover;
+}
+
+.explore-text {
+  padding-top: 30px;
+}
+.explore-text__heading {
+  font-family: "Rosario";
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 90px;
+  color: #222222;
+  margin-bottom: 20px;
+  min-height: 180px;
+}
+.explore-text__description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: #555555;
+  margin-bottom: 50px;
+  min-height: 90px;
+}
+
+.explore-link {
+  max-width: 179px;
+  min-height: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.explore-link__text {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  color: #222222;
+}
+.explore-link__move {
+  border: 2px solid transparent;
+}
+.explore-link__move:hover {
+  border-color: #222222;
+  border-radius: 50%;
+}
+
+.explore-bg {
+  position: absolute;
+  right: 50px;
+  bottom: 0;
+  max-width: 413px;
+  min-height: 397px;
+  object-fit: cover;
+}
+
+.reviews {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-right: 100px;
+  padding-left: 100px;
+  padding-top: 137px;
+  min-height: 637px;
+  position: relative;
+}
+
+.reviews-heading {
+  max-width: 640px;
+  min-height: 180px;
+  font-family: "Rosario";
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 90px;
+  color: #222222;
+  margin-bottom: 30px;
+  position: absolute;
+  top: 96px;
+  left: 100px;
+}
+
+.swiper {
+  position: relative;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: flex-end;
+}
+
+.slide-text {
+  padding-bottom: 32px;
+}
+
+.slide-review {
+  max-width: 586px;
+  min-height: 180px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: #555555;
+  margin-bottom: 40px;
+}
+
+.slide-people-name {
+  min-height: 36px;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 36px;
+  color: #222222;
+  margin-bottom: 20px;
+}
+
+.slide-nav {
+  max-width: 465px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 56px;
+  height: 56px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background-color: #09A66D;
+  color: #ffffff;
+  position: absolute;
+}
+
+.swiper-button-prev {
+  left: 427px;
+  bottom: 15px;
+}
+
+.swiper-button-next {
+  left: 510px;
+  bottom: 15px;
+}
+
+.slide-photo {
+  max-width: 500px;
+  min-height: 500px;
+  object-fit: cover;
+}
+
+body {
+  font-family: "DM Sans";
+  background: #FFFFFF;
+  overflow-x: hidden;
+}

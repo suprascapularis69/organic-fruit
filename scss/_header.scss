@@ -1,0 +1,48 @@
+.header {
+    @include wrapper;
+    @include flex;
+    padding-top: 50px;
+    margin-bottom: 43px;
+    min-height: 56px;
+}
+
+.header-menu {
+    max-width: 374px;
+    min-height: 24px;
+    @include flex;
+    &__item {
+        @include font-style(18px, 400, 24px, $font-color);
+        &:not(:last-child) {
+            margin-right: 40px;
+        }
+        &:hover {
+            color: $hover-color;
+        }
+    }
+}
+
+
+.header-buttons {
+    max-width: 292px;
+    min-height: 40px;
+    @include flex;
+    &__item {
+        margin-right: 20px;
+        border: 1px solid transparent;
+        &:last-child {
+            margin-right: 32px;
+        }
+        &:hover {
+            border-color: $hover-color;
+            border-radius: 50%;
+        }
+    }
+    &__btn {
+        @include buttons(160px, 40px, 8px);
+        border: 1px solid transparent;
+        &:hover {
+            border-color: $font-color;
+            color: $font-color;
+        }
+    }
+}

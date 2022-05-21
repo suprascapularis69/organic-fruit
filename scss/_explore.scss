@@ -1,0 +1,66 @@
+.explore {
+    width: 100vw;
+    background: rgba(9, 166, 109, 0.05);
+}
+
+.explore-wrapper {
+    @include wrapper;
+    padding-top: 89px;
+    min-height: 832px;
+    position: relative;
+}
+
+.explore-content {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+
+.explore-image {
+    margin-right: 50px;
+    &__item {
+        max-width: 600px;
+        min-height: 600px;
+        object-fit: cover;
+    }
+}
+
+.explore-text {
+    padding-top: 30px;
+    &__heading {
+        font-family: "Rosario";
+        @include font-style(70px, 700, 90px, $font-color);
+        margin-bottom: 20px;
+        min-height: 180px;
+    }
+    &__description {
+        @include font-style(18px, 400, 30px, #555555);
+        margin-bottom: 50px;
+        min-height: 90px;
+    }
+}
+
+.explore-link {
+    max-width: 179px;
+    min-height: 64px;
+    @include flex;
+    &__text {
+        @include font-style(18px, 500, 30px, $font-color);
+    }
+    &__move {
+        border: 2px solid transparent;
+        &:hover {
+            border-color: $font-color;
+            border-radius: 50%;
+        }
+    }
+}
+
+.explore-bg {
+    position: absolute;
+    right: 50px;
+    bottom: 0;
+    max-width: 413px;
+    min-height: 397px;
+    object-fit: cover;
+}

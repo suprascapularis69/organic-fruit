@@ -1,0 +1,75 @@
+.reviews {
+    @include wrapper;
+    padding-top: 137px;
+    min-height: 637px;
+    position: relative;
+}
+
+.reviews-heading {
+    max-width: 640px;
+    min-height: 180px;
+    font-family: "Rosario";
+    @include font-style(70px, 700, 90px, $font-color);
+    margin-bottom: 30px;
+    position: absolute;
+    top: 96px;
+    left: 100px;
+}
+
+.swiper {
+    position: relative;
+}
+
+.swiper-slide {
+    @include flex;
+    align-items: flex-end;
+}
+
+.slide-text {
+    padding-bottom: 32px;
+}
+
+.slide-review {
+    max-width: 586px;
+    min-height: 180px;
+    @include font-style(18px, 400, 30px, #555555);
+    margin-bottom: 40px;
+}
+
+.slide-people-name {
+    min-height: 36px;
+    @include font-style(30px, 500, 36px, $font-color);
+    margin-bottom: 20px;
+}
+
+.slide-nav {
+    max-width: 465px;
+    @include flex;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    width: 56px;
+    height: 56px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background-color: #09A66D;
+    color: #ffffff;
+    position: absolute;
+}
+
+.swiper-button-prev {
+    left: 427px;
+    bottom: 15px;
+}
+
+.swiper-button-next {
+    left: 510px;
+    bottom: 15px;
+}
+
+.slide-photo {
+    max-width: 500px;
+    min-height: 500px;
+    object-fit: cover;
+}

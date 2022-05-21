@@ -1,0 +1,99 @@
+.presentation {
+    width: 100vw;
+    background: rgba(9, 166, 109, 0.05);
+}
+
+.presentation-wrapper {
+    @include wrapper;
+    min-height: 850px;
+    padding-top: 93px;
+    padding-bottom: 50px;
+    position: relative;
+}
+
+.presentation-heading {
+    font-family: "Rosario";
+    @include font-style(70px, 700, 90px, $font-color);
+    text-align: center;
+    margin-bottom: 20px;
+    min-height: 90px;
+}
+
+.presentation-description {
+    max-width: 637px;
+    min-height: 90px;
+    @include font-style(18px, 400, 30px, #555555);
+    text-align: center;
+    margin: 0 auto 40px auto;
+}
+
+.presentation-order {
+    max-width: 176px;
+    min-height: 64px;
+    @include flex;
+    margin: 0 auto;
+    &__text {
+        @include font-style(18px, 500, 30px, $font-color);
+    }
+    &__link {
+        border: 2px solid transparent;
+        &:hover {
+            border-color: $font-color;
+            border-radius: 50%;
+        }
+    }
+}
+
+.presentation-stats {
+    position: absolute;
+    max-width: 250px;
+    min-height: 408px;
+    right: 100px;
+    bottom: 50px;
+}
+
+.stats-card {
+    max-width: 250px;
+    min-height: 116px;
+    @include flex;
+    justify-content: start;
+    padding: 17px 33px;
+    background: #FFFFFF;
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+    &__icon {
+        margin-right: 24px;
+    }
+}
+
+.stats {
+    text-align: center;
+    &__value {
+        @include font-style(48px, 400, 48px, #000000);
+        margin-bottom: 4px;
+    }
+    &__index {
+        @include font-style(18px, 400, 30px, #000000);
+    }
+}
+
+.presentation-first-bg {
+    position: absolute;
+    top: -37px;
+    left: 1px;
+    z-index: -3;
+    max-width: 612px;
+    min-height: 408px;
+    object-fit: cover;
+}
+
+.presentation-second-bg {
+    position: absolute;
+    bottom: 33px;
+    left: 120px;
+    z-index: -3;
+    max-width: 862px;
+    min-height: 465px;
+    object-fit: cover;
+}
