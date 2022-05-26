@@ -3,6 +3,10 @@
     padding-top: 140px;
     min-height: 1065px;
     position: relative;
+    @media (max-width: 890px) {
+        padding: 70px 20px;
+        min-height: 950px;
+    }
 }
 
 .service-heading {
@@ -10,6 +14,20 @@
     @include font-style(70px, 700, 90px, $font-color);
     margin-bottom: 20px;
     min-height: 90px;
+    @media (max-width: 1280px) {
+        @include font-style(60px, 700, 78px, $font-color);
+    }
+    @media (max-width: 1090px) {
+        text-align: center;
+    }
+    @media (max-width: 1090px) {
+        @include font-style(50px, 700, 65px, $font-color);
+        min-height: 65px;
+    }
+    @media (max-width: 600px) {
+        @include font-style(40px, 700, 52px, $font-color);
+        min-height: 52px;
+    }
 }
 
 .service-description {
@@ -17,11 +35,20 @@
     min-height: 90px;
     @include font-style(18px, 400, 30px, #555555);
     margin-bottom: 36px;
+    @media (max-width: 1280px) {
+        max-width: 600px;
+    }
+    @media (max-width: 1090px) {
+        margin: 0 auto 36px auto;
+    }
 }
 
 .service-benefits {
     max-width: 500px;
     min-height: 460px;
+    @media (max-width: 1090px) {
+        max-width: 100%;
+    }
 }
 
 .service-card {
@@ -30,6 +57,13 @@
     padding: 40px 60px;
     @include flex;
     justify-content: start;
+    @media (max-width: 1090px) {
+        justify-content: center;
+        max-width: 100%;
+    }
+    @media (max-width: 600px) {
+        padding: 40px 10px;
+    }
     &:nth-child(2) {
         background: #F3FBF8;
     }
@@ -56,6 +90,12 @@
     border: 1px solid transparent;
     width: 32px;
     height: 32px;
+    @media (max-width: 1090px) {
+        left: 50%;
+    }
+    @media (max-width: 600px) {
+        display: none;
+    }
     &:hover {
         border-color: $hover-color;
         border-radius: 50%;
@@ -70,6 +110,14 @@
     max-width: 600px;
     min-height: 600px;
     object-fit: cover;
+    @media (max-width: 1280px) {
+        max-width: 450px;
+        min-height: 450px;
+        bottom: 25%;
+    }
+    @media (max-width: 1090px) {
+        display: none;
+    }
 }
 
 .service-second-bg {

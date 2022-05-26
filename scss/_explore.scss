@@ -8,30 +8,69 @@
     padding-top: 89px;
     min-height: 832px;
     position: relative;
+    @media (max-width: 1280px) {
+        min-height: 700px;
+    }
+    @media (max-width: 890px) {
+        padding: 70px 20px;
+    }
 }
 
 .explore-content {
     display: flex;
     justify-content: start;
     align-items: start;
+    @media (max-width: 1090px) {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .explore-image {
     margin-right: 50px;
+    @media (max-width: 1090px) {
+        margin-right: 0;
+    }
     &__item {
         max-width: 600px;
         min-height: 600px;
         object-fit: cover;
+        @media (max-width: 1280px) {
+            max-width: 450px;
+            min-height: 450px;
+        }
+        @media (max-width: 600px) {
+            max-width: 100%;
+        }
     }
 }
 
 .explore-text {
     padding-top: 30px;
+    @media (max-width: 1090px) {
+        padding-bottom: 30px;
+    }
     &__heading {
         font-family: "Rosario";
         @include font-style(70px, 700, 90px, $font-color);
         margin-bottom: 20px;
         min-height: 180px;
+        @media (max-width: 1280px) {
+            @include font-style(60px, 700, 78px, $font-color);
+        }
+        @media (max-width: 1090px) {
+            text-align: center;
+            min-height: 80px;
+            max-width: 100%;
+        }
+        @media (max-width: 1090px) {
+            @include font-style(50px, 700, 65px, $font-color);
+            min-height: 65px;
+        }
+        @media (max-width: 600px) {
+            @include font-style(40px, 700, 52px, $font-color);
+            min-height: 52px;
+        }
     }
     &__description {
         @include font-style(18px, 400, 30px, #555555);
@@ -44,6 +83,9 @@
     max-width: 179px;
     min-height: 64px;
     @include flex;
+    @media (max-width: 1090px) {
+        margin: 0 auto;
+    }
     &__text {
         @include font-style(18px, 500, 30px, $font-color);
     }
@@ -63,4 +105,7 @@
     max-width: 413px;
     min-height: 397px;
     object-fit: cover;
+    @media (max-width: 890px) {
+        display: none;
+    }
 }

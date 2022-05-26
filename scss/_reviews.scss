@@ -3,6 +3,15 @@
     padding-top: 137px;
     min-height: 637px;
     position: relative;
+    @media (max-width: 1280px) {
+        padding-top: 280px;
+    }
+    @media (max-width: 1090px) {
+        padding-top: 100px;
+    }
+    @media (max-width: 890px) {
+        padding: 70px 20px;
+    }
 }
 
 .reviews-heading {
@@ -14,6 +23,22 @@
     position: absolute;
     top: 96px;
     left: 100px;
+    @media (max-width: 1280px) {
+        @include font-style(60px, 700, 78px, $font-color);
+    }
+    @media (max-width: 1090px) {
+        max-width: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+        @include font-style(50px, 700, 65px, $font-color);
+        min-height: 65px;
+        text-align: center;
+    }
+    @media (max-width: 600px) {
+        @include font-style(40px, 700, 52px, $font-color);
+        min-height: 52px;
+    }
 }
 
 .swiper {
@@ -23,6 +48,11 @@
 .swiper-slide {
     @include flex;
     align-items: flex-end;
+    @media (max-width: 1090px) {
+        flex-direction: column-reverse;
+        align-items: center;
+        max-width: 100%;
+    }
 }
 
 .slide-text {
@@ -42,11 +72,6 @@
     margin-bottom: 20px;
 }
 
-.slide-nav {
-    max-width: 465px;
-    @include flex;
-}
-
 .swiper-button-prev,
 .swiper-button-next {
     width: 56px;
@@ -61,15 +86,66 @@
 .swiper-button-prev {
     left: 427px;
     bottom: 15px;
+    @media (max-width: 1280px) {
+        left: 200px;
+    }
+    @media (max-width: 1090px) {
+        left: 50%;
+    }
+    @media (max-width: 600px) {
+        position: relative;
+        left: 0;
+    }
 }
 
 .swiper-button-next {
     left: 510px;
     bottom: 15px;
+    @media (max-width: 1280px) {
+        left: 283px;
+    }
+    @media (max-width: 1090px) {
+        left: 65%;
+    }
+    @media (max-width: 600px) {
+        right: 0;
+        left: auto;
+    }
 }
 
 .slide-photo {
     max-width: 500px;
     min-height: 500px;
+    border-radius: 50%;
     object-fit: cover;
+    @media (max-width: 1280px) {
+        max-width: 350px;
+        min-height: 350px;
+    }
+    @media (max-width: 1090px) {
+        margin-bottom: 20px;
+    }
+    @media (max-width: 600px) {
+        max-width: 100%;
+        min-height: 50%;
+    }
+}
+
+.reviews-list {
+    background: #FFFFFF;
+    box-shadow: -15px 15px 25px rgba(0, 96, 60, 0.04);
+    border-radius: 12px;
+    max-width: 220px;
+    min-height: 80px;
+    padding: 11px 35px 11px 21px;
+    position: absolute;
+    bottom: 15px;
+    right: 380px;
+    z-index: 5;
+    @media (max-width: 1090px) {
+        display: none;
+    }
+    &__grade {
+        margin-bottom: 10px;
+    }
 }

@@ -1,0 +1,88 @@
+.mobile-apps {
+    @include wrapper;
+    padding: 150px 200px 140px 200px;
+    @include flex;
+    @media (max-width: 1090px) {
+        justify-content: center;
+    }
+    @media (max-width: 890px) {
+        padding: 70px 20px;
+        min-height: 400px;
+    }
+}
+
+.mobile-apps-photo {
+    max-width: 265px;
+    min-height: 496px;
+    object-fit: cover;
+    margin-right: 112px;
+    @media (max-width: 1090px) {
+        display: none;
+    }
+}
+
+.mobile-apps-text {
+    max-width: 662px;
+    min-height: 426px;
+    @media (max-width: 1090px) {
+        max-width: 100%;
+    }
+}
+
+.mobile-tab {
+    max-width: 170px;
+    min-height: 40px;
+    background: #F3FBF8;
+    border-radius: 50px;
+    padding: 11px 24px;
+    margin-bottom: 16px;
+    @media (max-width: 1090px) {
+        margin: 0 auto;
+    }
+}
+
+.mobile-heading {
+    font-family: "Rosario";
+    @include font-style(70px, 700, 90px, $font-color);
+    min-height: 180px;
+    margin-bottom: 20px;
+    @media (max-width: 1280px) {
+        @include font-style(50px, 700, 70px, $font-color);
+        min-height: 150px;
+    }
+    @media (max-width: 1090px) {
+        text-align: center;
+    }
+    @media (max-width: 890px) {
+        min-height: 70px;
+    }
+    @media (max-width: 600px) {
+        @include font-style(40px, 700, 52px, $font-color);
+        min-height: 52px;
+    }
+}
+
+.mobile-description {
+    max-width: 574px;
+    min-height: 90px;
+    @include font-style(18px, 400, 30px, #555555);
+    margin-bottom: 50px;
+    @media (max-width: 1090px) {
+       margin: 0 auto 50px auto;
+    }
+}
+
+.mobile-links {
+    max-width: 232px;
+    min-height: 30px;
+    @include flex;
+    @media (max-width: 1090px) {
+        margin: 0 auto;
+    }
+    &__item {
+        border: 1px solid transparent;
+        &:hover {
+            border-color: $hover-color;
+        }
+    }
+}

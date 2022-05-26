@@ -4,16 +4,37 @@
     padding-top: 50px;
     margin-bottom: 43px;
     min-height: 56px;
+    @media (max-width: 890px) {
+        flex-direction: column;
+        padding: 50px 20px 0 20px;
+    }
+    @media (max-width: 600px) {
+        flex-direction: row;
+        justify-content: space-around;
+    }
 }
 
 .header-menu {
     max-width: 374px;
     min-height: 24px;
     @include flex;
+    @media (max-width: 890px) {
+        margin-bottom: 15px;
+    }
+    @media (max-width: 600px) {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
     &__item {
         @include font-style(18px, 400, 24px, $font-color);
+        @media (max-width: 600px) {
+            margin-bottom: 10px;
+        }
         &:not(:last-child) {
             margin-right: 40px;
+            @media (max-width: 600px) {
+                margin-right: 0;
+            }
         }
         &:hover {
             color: $hover-color;
@@ -21,16 +42,30 @@
     }
 }
 
+.header-logo {
+    @media (max-width: 1090px) {
+        display: none;
+    }
+}
 
 .header-buttons {
     max-width: 292px;
     min-height: 40px;
     @include flex;
+    @media (max-width: 600px) {
+        flex-direction: column;
+    }
     &__item {
         margin-right: 20px;
         border: 1px solid transparent;
+        @media (max-width: 600px) {
+            margin-right: 0;
+        }
         &:last-child {
             margin-right: 32px;
+            @media (max-width: 600px) {
+                margin-right: 0;
+            }
         }
         &:hover {
             border-color: $hover-color;
@@ -40,6 +75,9 @@
     &__btn {
         @include buttons(160px, 40px, 8px);
         border: 1px solid transparent;
+        @media (max-width: 600px) {
+            min-width: 100px;
+        }
         &:hover {
             border-color: $font-color;
             color: $font-color;

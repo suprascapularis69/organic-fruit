@@ -9,6 +9,9 @@
     padding-top: 93px;
     padding-bottom: 50px;
     position: relative;
+    @media (max-width: 890px) {
+        padding: 70px 20px;
+    }
 }
 
 .presentation-heading {
@@ -17,6 +20,17 @@
     text-align: center;
     margin-bottom: 20px;
     min-height: 90px;
+    @media (max-width: 1280px) {
+        @include font-style(60px, 700, 78px, $font-color);
+    }
+    @media (max-width: 1090px) {
+        @include font-style(50px, 700, 65px, $font-color);
+        min-height: 65px;
+    }
+    @media (max-width: 600px) {
+        @include font-style(40px, 700, 52px, $font-color);
+        min-height: 52px;
+    }
 }
 
 .presentation-description {
@@ -32,6 +46,9 @@
     min-height: 64px;
     @include flex;
     margin: 0 auto;
+    @media (max-width: 600px) {
+        margin-bottom: 20px;
+    }
     &__text {
         @include font-style(18px, 500, 30px, $font-color);
     }
@@ -50,6 +67,14 @@
     min-height: 408px;
     right: 100px;
     bottom: 50px;
+    @media (max-width: 600px) {
+        position: relative;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
 }
 
 .stats-card {
@@ -68,10 +93,16 @@
 }
 
 .stats {
+    width: 104px;
     text-align: center;
     &__value {
         @include font-style(48px, 400, 48px, #000000);
         margin-bottom: 4px;
+        display: inline-block;
+    }
+    &__thousands {
+        @include font-style(48px, 400, 48px, #000000);
+        display: inline-block;
     }
     &__index {
         @include font-style(18px, 400, 30px, #000000);
@@ -86,6 +117,9 @@
     max-width: 612px;
     min-height: 408px;
     object-fit: cover;
+    @media (max-width: 600px) {
+        display: none;
+    }
 }
 
 .presentation-second-bg {
@@ -96,4 +130,15 @@
     max-width: 862px;
     min-height: 465px;
     object-fit: cover;
+    @media (max-width: 1090px) {
+        max-width: 430px;
+        min-height: 230px;
+    }
+    @media (max-width: 890px) {
+        max-width: 100%;
+        left: 0;
+    }
+    @media (max-width: 600px) {
+        display: none;
+    }
 }
