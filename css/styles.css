@@ -793,11 +793,15 @@
 .swiper-button-next {
   width: 56px;
   height: 56px;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   border-radius: 50%;
   background-color: #09A66D;
   color: #ffffff;
   position: absolute;
+}
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  border-color: #222222;
 }
 
 .swiper-button-prev {

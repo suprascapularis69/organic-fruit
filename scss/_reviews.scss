@@ -76,11 +76,14 @@
 .swiper-button-next {
     width: 56px;
     height: 56px;
-    border: 1px solid transparent;
+    border: 2px solid transparent;
     border-radius: 50%;
     background-color: #09A66D;
     color: #ffffff;
     position: absolute;
+    &:hover {
+        border-color: $font-color;
+    }
 }
 
 .swiper-button-prev {
